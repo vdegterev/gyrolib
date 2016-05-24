@@ -214,6 +214,10 @@ typedef struct {
 @{
 */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /// Initializes the Gyroscope and returns nonzero if successfull
 char gyro_init( void );
 /// Writes to the specified register in the Gyroscope and returns nonzero if successfull
@@ -241,6 +245,10 @@ char accel_power_down( void );
 char accel_awake( int data_rate );
 /// Gets the acceleration from the Accelerometer in micro-g and returns nonzero if successfull
 char accel_get_value( TAxisData *pval, int32_t lsb_value );
+#ifdef __cplusplus
+}
+#endif
+
 
 ///@}
 
